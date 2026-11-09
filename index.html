@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#C981FE">
+  <meta name="description" content="شاي جسار — مشروبات شاي تقليدية، مشروبات باردة، قهوة، وتجربة ضيافة مميزة.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <title>شاي جسار | شاي، أصالة، ورفقة طيبة</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=Kufam:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --ink: #332642;
+      --ink-soft: #66536f;
+      --cream: #FDE4AB;
+      --paper: #FFF9EA;
+      --gold: #FDE4AB;
+      --gold-light: #FFF1C9;
+      --sage: #C981FE;
+      --sage-light: #F1DFFF;
+      --berry: #8A4BB0;
+      --line: rgba(51, 38, 66, .16);
+      --shadow: 0 22px 65px rgba(74, 44, 91, .16);
+      --radius-lg: 30px;
+      --radius-md: 20px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: Cairo, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    [lang="ar"], [lang="ar"] * {
+      font-family: "Kufam", Cairo, sans-serif;
+    }
+    [lang="ar"] h1,
+    [lang="ar"] h2,
+    [lang="ar"] h3,
+    [lang="ar"] .eyebrow,
+    [lang="ar"] .signature {
+      font-family: "Kufam", Cairo, sans-serif;
+      font-weight: 700;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    .container { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--berry);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .section-heading {
+      max-width: 650px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+    .section-heading h2 {
+      margin: 0;
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      font-weight: 400;
+      line-height: 1.02;
+    }
+    .section-heading p { margin: 18px 0 0; color: var(--ink-soft); }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      background: rgba(51, 38, 66, .96);
+      color: #fff;
+      backdrop-filter: blur(16px);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 24px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .brand img { width: 43px; height: 43px; object-fit: contain; }
+    .brand span {
+      direction: rtl;
+      font-family: "Kufam", Cairo, sans-serif;
+      font-size: .92rem;
+      letter-spacing: -.05em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(16px, 3vw, 34px);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: .88rem;
+      font-weight: 700;
+    }
+    .nav-links a { color: rgba(255,255,255,.78); text-decoration: none; transition: color .2s ease; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--gold-light); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 720px;
+      display: grid;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(51,38,66,.98) 0%, rgba(51,38,66,.87) 44%, rgba(51,38,66,.28) 100%),
+        url("assets/Gemini_Generated_Image_laeou8laeou8laeo.png") center/cover;
+      color: #fff;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -100px;
+      bottom: -180px;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(253,228,171,.42);
+      border-radius: 50%;
+      box-shadow: 0 0 0 30px rgba(253,228,171,.07), 0 0 0 60px rgba(201,129,254,.06);
+    }
+    .hero-content { position: relative; z-index: 1; width: min(660px, 100%); padding: 105px 0; }
+    .hero h1 {
+      max-width: 700px;
+      margin: 0;
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(4rem, 10vw, 8.5rem);
+      font-weight: 400;
+      letter-spacing: -.04em;
+      line-height: .9;
+    }
+    .hero h1 span { display: block; color: var(--gold-light); }
+    .hero-copy { max-width: 530px; margin: 32px 0 0; color: rgba(255,255,255,.78); font-size: 1.08rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease, color .2s ease;
+    }
+    .button:hover, .button:focus-visible { transform: translateY(-3px); }
+    .button-primary { background: var(--gold); color: var(--ink); }
+    .button-primary:hover, .button-primary:focus-visible { background: var(--gold-light); }
+    .button-ghost { border-color: rgba(255,255,255,.35); color: #fff; }
+    .button-ghost:hover, .button-ghost:focus-visible { background: rgba(255,255,255,.1); }
+
+    .intro {
+      position: relative;
+      overflow: hidden;
+      padding: 140px 0 120px;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(201,129,254,.18), transparent 34%),
+        var(--paper);
+    }
+    .intro::before {
+      content: "شاي جسار";
+      position: absolute;
+      left: -48px;
+      bottom: 20px;
+      color: rgba(201,129,254,.1);
+      direction: rtl;
+      font-family: "Kufam", Cairo, sans-serif;
+      font-size: clamp(5rem, 15vw, 13rem);
+      font-weight: 800;
+      line-height: .8;
+      pointer-events: none;
+    }
+    .intro-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 85px; align-items: center; position: relative; z-index: 1; }
+    .intro-image { position: relative; min-height: 510px; }
+    .intro-image::before {
+      content: "";
+      position: absolute;
+      top: -25px;
+      right: 6%;
+      width: 76%;
+      height: 100%;
+      border: 1px solid var(--sage);
+      border-radius: var(--radius-lg);
+      transform: rotate(4deg);
+    }
+    .intro-image img { width: 82%; height: 510px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow); position: relative; }
+    .intro-image img:nth-child(2) {
+      position: absolute;
+      right: 0;
+      bottom: -38px;
+      width: 42%;
+      height: 190px;
+      border: 10px solid var(--paper);
+    }
+    .intro-copy { max-width: 580px; }
+    .intro-copy h2 { margin: 0; font-family: "Kufam", Cairo, sans-serif; font-size: clamp(2.4rem, 5vw, 5.2rem); font-weight: 700; letter-spacing: -.08em; line-height: 1.3; }
+    .intro-copy p { margin: 28px 0 0; color: var(--ink-soft); font-size: 1.08rem; line-height: 2; }
+    .signature { margin-top: 34px; color: var(--berry); font-family: "Kufam", Cairo, sans-serif; font-size: 1.8rem; font-weight: 700; }
+
+    .products { padding: 110px 0; background: var(--sage-light); }
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .product-card {
+      overflow: hidden;
+      min-height: 335px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      border-radius: var(--radius-md);
+      background: var(--ink);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(23,37,31,.1);
+    }
+    .product-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .98; transition: transform .5s ease; }
+    .product-card::after { content: ""; position: absolute; inset: 64% 0 0; background: linear-gradient(transparent, rgba(51,38,66,.97)); }
+    .product-card:hover img { transform: scale(1.04); }
+    .product-info { position: relative; z-index: 1; padding: 24px; }
+    .product-info h3 { margin: 0; font-size: 1.23rem; }
+    .product-info p { margin: 4px 0 0; color: rgba(255,255,255,.72); font-size: .88rem; }
+    .product-card.tall { min-height: 335px; }
+
+    .menu { padding: 110px 0; background: var(--paper); }
+    .menu-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 55px; align-items: center; }
+    .menu-copy h2 { margin: 0; font-family: "DM Serif Display", Georgia, serif; font-size: clamp(2.7rem, 5vw, 5rem); font-weight: 400; line-height: 1; }
+    .menu-copy p { color: var(--ink-soft); }
+    .menu-list { display: grid; gap: 12px; margin: 28px 0; padding: 0; list-style: none; }
+    .menu-list li { display: flex; align-items: center; gap: 12px; font-weight: 700; }
+    .menu-list li::before { content: "✦"; color: var(--gold); }
+    .menu-highlights { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 30px; }
+    .menu-item { padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--cream); }
+    .menu-copy h2 {
+      font-family: "Kufam", Cairo, sans-serif;
+      font-size: clamp(2rem, 4vw, 3.9rem);
+      font-weight: 700;
+      letter-spacing: -.07em;
+      line-height: 1.35;
+    }
+    .menu-item h3 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -.04em;
+    }
+    .menu-item p { margin: 0; color: var(--ink-soft); font-size: .82rem; }
+    .menu-prices { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .price-card { padding: 18px 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--cream); }
+    .price-card-head { display: flex; align-items: center; gap: 12px; min-height: 48px; }
+    .price-card-head img { width: 48px; height: 48px; flex: 0 0 48px; object-fit: contain; border-radius: 10px; }
+    .price-card h3 { margin: 0; font-size: 1rem; }
+    .price-card p { margin: 5px 0 0; color: var(--ink-soft); font-size: .75rem; }
+    .price-row { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line); font-weight: 700; font-size: .86rem; }
+    .price-row strong { color: var(--berry); white-space: nowrap; }
+    .menu-note { margin-top: 12px; color: var(--ink-soft); font-size: .78rem; }
+
+    .contact { position: relative; overflow: hidden; padding: 150px 0; background: var(--ink); color: #fff; }
+    .contact::before {
+      content: "زورونا";
+      position: absolute;
+      left: -20px;
+      bottom: -34px;
+      color: rgba(253,228,171,.08);
+      direction: rtl;
+      font-family: "Kufam", Cairo, sans-serif;
+      font-size: clamp(7rem, 20vw, 18rem);
+      font-weight: 800;
+      line-height: .8;
+      pointer-events: none;
+    }
+    .contact-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 70px; align-items: center; position: relative; z-index: 1; }
+    .contact h2 { margin: 0; max-width: 720px; font-family: "Kufam", Cairo, sans-serif; font-size: clamp(2.7rem, 6vw, 6.2rem); font-weight: 700; letter-spacing: -.08em; line-height: 1.3; }
+    .contact p { max-width: 520px; margin: 28px 0 0; color: rgba(255,255,255,.76); font-size: 1.08rem; line-height: 2; }
+    .socials { display: grid; gap: 15px; }
+    .social-link { display: flex; align-items: center; justify-content: space-between; padding: 21px 23px; border: 1px solid rgba(255,255,255,.2); border-radius: 17px; color: rgba(255,255,255,.9); font-size: 1rem; text-decoration: none; transition: border-color .2s ease, background .2s ease, transform .2s ease; }
+    .social-link:hover, .social-link:focus-visible { transform: translateX(-5px); }
+    .social-link:hover, .social-link:focus-visible { border-color: var(--gold); background: rgba(216,168,78,.1); }
+    .social-link span:last-child { color: var(--gold-light); }
+
+    footer { padding: 26px 0; background: #251A31; color: rgba(255,255,255,.68); font-size: .8rem; }
+    .footer-row { display: flex; justify-content: space-between; gap: 20px; }
+    .footer-row strong { color: var(--gold-light); }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+    @media (max-width: 900px) {
+      .hero { min-height: 650px; background-position: 63% center; }
+      .intro-grid, .menu-layout, .contact-grid { grid-template-columns: 1fr; }
+      .intro-image { order: 2; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .product-card.tall { min-height: 335px; }
+      .menu-copy { max-width: 650px; }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(100% - 28px, 520px); }
+      .nav { min-height: 68px; }
+      .nav-links { display: none; }
+      .hero { min-height: 620px; }
+      .hero-content { padding: 80px 0; }
+      .hero h1 { font-size: clamp(3.5rem, 17vw, 5.5rem); }
+      .intro, .products, .menu, .contact { padding: 78px 0; }
+      .intro-image, .intro-image img { min-height: 320px; height: 320px; }
+      .intro-image img:nth-child(2) { height: 140px; }
+      .intro-copy h2 { font-size: 2.25rem; }
+      .intro-copy p, .contact p { font-size: .95rem; line-height: 1.9; }
+      .contact h2 { font-size: 2.45rem; }
+      .product-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .product-card, .product-card.tall { min-height: 270px; }
+      .product-info { padding: 16px; }
+      .product-info h3 { font-size: 1rem; }
+      .product-info p { font-size: .74rem; }
+      .menu-prices { grid-template-columns: 1fr; }
+      .footer-row { flex-direction: column; gap: 4px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#visit" aria-label="شاي جسار">
+        <img src="logo.png" alt="">
+        <span>شاي جسار</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#visit">زورونا</a></li>
+          <li><a href="#menu">القائمة</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact" id="visit">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">ننتظركم</p>
+          <h2>الشاي ألذ مع الرفقة الطيبة.</h2>
+          <p>زورونا في شاي جسار على شارع الدرعية في تبوك، وتابعونا لاكتشاف جديد مشروباتنا.</p>
+          <p class="location-address">شارع الدرعية، تبوك 71411</p>
+        </div>
+        <div class="socials">
+          <a class="social-link" href="https://maps.app.goo.gl/nVUqSaVR5dbhieGn6?g_st=ic" target="_blank" rel="noopener"><span>افتح موقعنا على خرائط Google</span><span>↗</span></a>
+          <a class="social-link" href="https://www.instagram.com/shayjassar" target="_blank" rel="noopener"><span>إنستقرام · @shayjassar</span><span>↗</span></a>
+          <a class="social-link" href="https://www.tiktok.com/@shaijassar" target="_blank" rel="noopener"><span>تيك توك · @shaijassar</span><span>↗</span></a>
+          <a class="social-link" href="https://snapchat.com/t/UoUrNFPC" target="_blank" rel="noopener"><span>سناب شات · @j_tea1</span><span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu" id="menu" lang="ar" dir="rtl">
+      <div class="container menu-layout">
+        <div class="menu-copy">
+          <p class="eyebrow">القائمة</p>
+          <h2>نكهة تناسب كل مزاج.</h2>
+          <p>من كاسات الشاي التقليدية إلى الخلطات الباردة، صُممت قائمتنا للزيارات السريعة والجلسات الطويلة وكل لحظة بينهما.</p>
+          <div class="menu-highlights">
+            <article class="menu-item"><h3>المشروبات التقليدية</h3><p>شاي أحمر، شاي تركي، شاي أخضر، وكرك.</p></article>
+            <article class="menu-item"><h3>المشروبات الباردة</h3><p>شاي مثلج، خلطات الليمون، وكركديه.</p></article>
+            <article class="menu-item"><h3>القهوة وأكثر</h3><p>قهوة غنية ومشروبات منعشة من اختيارنا.</p></article>
+            <article class="menu-item"><h3>جلسة شاي متكاملة</h3><p>أباريق، دلال، صواني، ومياه مميزة.</p></article>
+          </div>
+          <p class="menu-note">للاطلاع على النسخة الكاملة: <a href="assets/منيو شاي جسار.pdf" target="_blank" rel="noopener">افتح القائمة الأصلية</a>.</p>
+        </div>
+        <div class="menu-prices" aria-label="أسعار القائمة">
+          <article class="price-card"><div class="price-card-head"><img src="assets/red tea.png" alt=""><h3>شاي جسار</h3></div><p>كوب / كوب كبير</p><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/turkish 3.png" alt=""><h3>شاي تركي</h3></div><p>نكهة أصيلة بطابع تركي</p><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/green tea.png" alt=""><h3>شاي أخضر</h3></div><p>خفيف ومنعش</p><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/fire tea.png" alt=""><h3>شاي مدخّن</h3></div><p>شاي غني بنكهة مميزة</p><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/karak.png" alt=""><h3>كرك</h3></div><p>شاي بالحليب والبهارات</p><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/dallah 1.png" alt=""><h3>قهوة سعودية</h3></div><p>دلة قهوة عربية</p><div class="price-row"><span>الدلة</span><strong>١٢ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/coffee.png" alt=""><h3>قهوة تركية</h3></div><p>قهوة بطابع تركي</p><div class="price-row"><span>الكوب</span><strong>٧ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/coffee.png" alt=""><h3>V60</h3></div><p>قهوة مقطرة</p><div class="price-row"><span>الكوب</span><strong>٩ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/hibiscus.png" alt=""><h3>كركديه</h3></div><p>مشروب بارد منعش</p><div class="price-row"><span>الكوب</span><strong>١٠ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/iced tea.png" alt=""><h3>آيس تي</h3></div><p>شاي مثلج</p><div class="price-row"><span>الكوب</span><strong>١٠ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/art (Custom).png" alt=""><h3>مكسرات</h3></div><p>اختيار صغير أو كبير</p><div class="price-row"><span>صغير / كبير</span><strong>٥ / ٧ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/Gemini_Generated_Image_mn82nimn82nimn82.png" alt=""><h3>كيك برتقال</h3></div><p>قطعة كيك طازجة</p><div class="price-row"><span>القطعة</span><strong>٥ ريال</strong></div></article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span><strong>شاي جسار</strong> · شاي، أصالة، ورفقة طيبة.</span>
+      <span>© 2026 شاي جسار</span>
+    </div>
+  </footer>
+</body>
+</html>
