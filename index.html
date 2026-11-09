@@ -241,8 +241,8 @@
 
     .menu { padding: 110px 0 170px; background: var(--paper); }
     .menu-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 55px; align-items: center; }
-    .menu-art { grid-column: 1 / -1; position: relative; width: 100vw; height: min(72vw, 760px); margin: 90px calc(50% - 50vw) -80px; overflow: hidden; }
-    .menu-art img { position: absolute; right: -95px; bottom: -80px; display: block; width: min(100%, 1000px); max-width: none; height: auto; }
+    .menu-art { grid-column: 1 / -1; width: 100vw; margin: 90px calc(50% - 50vw) -80px; text-align: right; }
+    .menu-art img { display: block; width: 100%; max-width: none; height: auto; margin-left: auto; }
     .menu-copy h2 { margin: 0; font-family: "DM Serif Display", Georgia, serif; font-size: clamp(2.7rem, 5vw, 5rem); font-weight: 400; line-height: 1; }
     .menu-copy p { color: var(--ink-soft); }
     .menu-list { display: grid; gap: 12px; margin: 28px 0; padding: 0; list-style: none; }
@@ -328,7 +328,7 @@
       .product-info h3 { font-size: 1rem; }
       .product-info p { font-size: .74rem; }
       .menu-prices { grid-template-columns: 1fr; }
-      .menu-art { height: min(112vw, 620px); margin-top: 60px; margin-bottom: -80px; }
+      .menu-art { margin-top: 60px; margin-bottom: -80px; }
       .footer-row { flex-direction: column; gap: 4px; }
     }
     @media (prefers-reduced-motion: reduce) {
