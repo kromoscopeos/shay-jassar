@@ -264,8 +264,8 @@
     .menu-item p { margin: 0; color: var(--ink-soft); font-size: .82rem; }
     .menu-prices { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .price-card { padding: 18px 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--cream); }
-    .price-card-head { display: flex; align-items: center; gap: 12px; min-height: 48px; }
-    .price-card-head img { width: 48px; height: 48px; flex: 0 0 48px; object-fit: cover; object-position: center; background: #fff; border: 1px solid rgba(51,38,66,.08); border-radius: 10px; }
+    .price-card-head { display: flex; align-items: center; gap: 14px; min-height: 72px; }
+    .price-card-head img { width: 72px; height: 72px; flex: 0 0 72px; object-fit: contain; object-position: center; padding: 3px; background: #fff; border: 1px solid rgba(51,38,66,.08); border-radius: 12px; }
     .price-card h3 { margin: 0; font-size: 1rem; }
     .price-card p { margin: 5px 0 0; color: var(--ink-soft); font-size: .75rem; }
     .price-row { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line); font-weight: 700; font-size: .86rem; }
@@ -374,26 +374,26 @@
           <h2>نكهة تناسب كل مزاج.</h2>
           <p>من كاسات الشاي التقليدية إلى الخلطات الباردة، صُممت قائمتنا للزيارات السريعة والجلسات الطويلة وكل لحظة بينهما.</p>
           <div class="menu-highlights">
-            <article class="menu-item"><h3>المشروبات التقليدية</h3><p>شاي أحمر، شاي تركي، شاي أخضر، وكرك.</p></article>
-            <article class="menu-item"><h3>المشروبات الباردة</h3><p>شاي مثلج، خلطات الليمون، وكركديه.</p></article>
-            <article class="menu-item"><h3>القهوة وأكثر</h3><p>قهوة غنية ومشروبات منعشة من اختيارنا.</p></article>
-            <article class="menu-item"><h3>جلسة شاي متكاملة</h3><p>أباريق، دلال، صواني، ومياه مميزة.</p></article>
+            <article class="menu-item"><h3>المشروبات التقليدية</h3></article>
+            <article class="menu-item"><h3>المشروبات الباردة</h3></article>
+            <article class="menu-item"><h3>القهوة وأكثر</h3></article>
+            <article class="menu-item"><h3>جلسة شاي متكاملة</h3></article>
           </div>
           <p class="menu-note">للاطلاع على النسخة الكاملة: <a href="assets/منيو شاي جسار.pdf" target="_blank" rel="noopener">افتح القائمة الأصلية</a>.</p>
         </div>
         <div class="menu-prices" aria-label="أسعار القائمة">
-          <article class="price-card"><div class="price-card-head"><img src="assets/red tea.png" alt=""><h3>شاي جسار</h3></div><p>كوب / كوب كبير</p><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
-          <article class="price-card"><div class="price-card-head"><img src="assets/turkish 3.png" alt=""><h3>شاي تركي</h3></div><p>نكهة أصيلة بطابع تركي</p><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
-          <article class="price-card"><div class="price-card-head"><img src="assets/green tea.png" alt=""><h3>شاي أخضر</h3></div><p>خفيف ومنعش</p><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
-          <article class="price-card"><div class="price-card-head"><img src="assets/fire tea.png" alt=""><h3>شاي مدخّن</h3></div><p>شاي غني بنكهة مميزة</p><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
-          <article class="price-card"><div class="price-card-head"><img src="assets/karak.png" alt=""><h3>كرك</h3></div><p>شاي بالحليب والبهارات</p><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
-          <article class="price-card"><div class="price-card-head"><img src="assets/dallah 1.png" alt=""><h3>قهوة سعودية</h3></div><p>دلة قهوة عربية</p><div class="price-row"><span>الدلة</span><strong>١٢ ريال</strong></div></article>
-          <article class="price-card"><div class="price-card-head"><img src="assets/turkish 4.png" alt=""><h3>قهوة تركية</h3></div><p>قهوة بطابع تركي</p><div class="price-row"><span>الكوب</span><strong>٧ ريال</strong></div></article>
-          <article class="price-card"><div class="price-card-head"><img src="assets/coffee.png" alt=""><h3>V60</h3></div><p>قهوة مقطرة</p><div class="price-row"><span>الكوب</span><strong>٩ ريال</strong></div></article>
-          <article class="price-card"><div class="price-card-head"><img src="assets/hibiscus.png" alt=""><h3>كركديه</h3></div><p>مشروب بارد منعش</p><div class="price-row"><span>الكوب</span><strong>١٠ ريال</strong></div></article>
-          <article class="price-card"><div class="price-card-head"><img src="assets/iced tea.png" alt=""><h3>آيس تي</h3></div><p>شاي مثلج</p><div class="price-row"><span>الكوب</span><strong>١٠ ريال</strong></div></article>
-          <article class="price-card"><div class="price-card-head"><img src="assets/tray small.png" alt=""><h3>مكسرات</h3></div><p>اختيار صغير أو كبير</p><div class="price-row"><span>صغير / كبير</span><strong>٥ / ٧ ريال</strong></div></article>
-          <article class="price-card"><div class="price-card-head"><img src="assets/orange_cake_enamel_pin.jpg" alt=""><h3>كيك برتقال</h3></div><p>قطعة كيك طازجة</p><div class="price-row"><span>القطعة</span><strong>٥ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/red tea.png" alt=""><h3>شاي جسار</h3></div><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/turkish 3.png" alt=""><h3>شاي تركي</h3></div><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/green tea.png" alt=""><h3>شاي أخضر</h3></div><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/fire tea.png" alt=""><h3>شاي مدخّن</h3></div><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/karak.png" alt=""><h3>كرك</h3></div><div class="price-row"><span>حار</span><strong>٦ / ٧ ريال</strong></div><div class="price-row"><span>بارد</span><strong>٣ / ٥ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/dallah 1.png" alt=""><h3>قهوة سعودية</h3></div><div class="price-row"><span>الدلة</span><strong>١٢ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/menu-turkish-coffee.png" alt=""><h3>قهوة تركية</h3></div><div class="price-row"><span>الكوب</span><strong>٧ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/coffee.png" alt=""><h3>V60</h3></div><div class="price-row"><span>الكوب</span><strong>٩ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/hibiscus.png" alt=""><h3>كركديه</h3></div><div class="price-row"><span>الكوب</span><strong>١٠ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/iced tea.png" alt=""><h3>آيس تي</h3></div><div class="price-row"><span>الكوب</span><strong>١٠ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/menu-nuts.png" alt=""><h3>مكسرات</h3></div><div class="price-row"><span>صغير / كبير</span><strong>٥ / ٧ ريال</strong></div></article>
+          <article class="price-card"><div class="price-card-head"><img src="assets/menu-orange-cake.jpg" alt=""><h3>كيك برتقال</h3></div><div class="price-row"><span>القطعة</span><strong>٥ ريال</strong></div></article>
         </div>
       </div>
     </section>
