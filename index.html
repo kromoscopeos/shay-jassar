@@ -239,8 +239,10 @@
     .product-info p { margin: 4px 0 0; color: rgba(255,255,255,.72); font-size: .88rem; }
     .product-card.tall { min-height: 335px; }
 
-    .menu { padding: 110px 0; background: var(--paper); }
+    .menu { padding: 110px 0 170px; background: var(--paper); }
     .menu-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 55px; align-items: center; }
+    .menu-art { grid-column: 1 / -1; width: min(100%, 980px); margin: 90px auto -80px; text-align: center; }
+    .menu-art img { display: block; width: 100%; max-height: 620px; object-fit: contain; object-position: center bottom; margin: 0 auto; }
     .menu-copy h2 { margin: 0; font-family: "DM Serif Display", Georgia, serif; font-size: clamp(2.7rem, 5vw, 5rem); font-weight: 400; line-height: 1; }
     .menu-copy p { color: var(--ink-soft); }
     .menu-list { display: grid; gap: 12px; margin: 28px 0; padding: 0; list-style: none; }
@@ -326,6 +328,7 @@
       .product-info h3 { font-size: 1rem; }
       .product-info p { font-size: .74rem; }
       .menu-prices { grid-template-columns: 1fr; }
+      .menu-art { margin-top: 60px; margin-bottom: -80px; }
       .footer-row { flex-direction: column; gap: 4px; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -397,6 +400,9 @@
           <article class="price-card"><div class="price-card-head"><img src="assets/puff-white-cheese.webp" alt=""><h3>بف جبن أبيض</h3></div><div class="price-row"><span>القطعة</span><strong>٢ ريال</strong></div></article>
           <article class="price-card"><div class="price-card-head"><img src="assets/puff-cheddar.webp" alt=""><h3>بف جبن شيدر</h3></div><div class="price-row"><span>القطعة</span><strong>٢ ريال</strong></div></article>
           <article class="price-card"><div class="price-card-head"><img src="assets/puff-jalapeno-cheddar.webp" alt=""><h3>بف هالبينو وشيدر</h3></div><div class="price-row"><span>القطعة</span><strong>٢ ريال</strong></div></article>
+        </div>
+        <div class="menu-art" aria-hidden="true">
+          <img src="assets/menu-shop.webp" alt="">
         </div>
       </div>
     </section>
